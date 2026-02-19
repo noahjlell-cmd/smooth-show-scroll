@@ -66,33 +66,33 @@ const About = () => {
     <div className="min-h-screen bg-background font-sans-clean">
       <Navbar />
 
-      {/* Hero Section — pure black */}
-      <section className="relative overflow-hidden pt-32 pb-24" style={{ background: "hsl(0 0% 4%)" }}>
+      {/* Hero Section — light gray */}
+      <section className="relative overflow-hidden pt-32 pb-24" style={{ background: "hsl(0 0% 93%)" }}>
         <div
           className="absolute inset-0 opacity-[0.04]"
           style={{
-            backgroundImage:
-              "repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)",
+          backgroundImage:
+              "repeating-linear-gradient(45deg, #000 0, #000 1px, transparent 0, transparent 50%)",
             backgroundSize: "20px 20px",
           }}
         />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-12 text-center">
-          <p className="text-silver text-xs tracking-[0.3em] uppercase font-medium mb-6">
+          <p className="text-xs tracking-[0.3em] uppercase font-medium mb-6" style={{ color: "hsl(0 0% 40%)" }}>
             Who We Are
           </p>
-          <h1 className="font-display text-5xl md:text-7xl font-bold text-white leading-tight mb-8">
+          <h1 className="font-display text-5xl md:text-7xl font-bold leading-tight mb-8" style={{ color: "hsl(0 0% 8%)" }}>
             Meet the Team
-            <span className="block text-white/40 mt-2">Behind the Strategy</span>
+            <span className="block mt-2" style={{ color: "hsl(0 0% 45%)" }}>Behind the Strategy</span>
           </h1>
-          <div className="w-16 h-px bg-white/30 mx-auto mb-8" />
-          <p className="text-white/50 text-lg max-w-2xl mx-auto leading-relaxed font-sans-clean">
+          <div className="w-16 h-px mx-auto mb-8" style={{ background: "hsl(0 0% 30%)" }} />
+          <p className="text-lg max-w-2xl mx-auto leading-relaxed font-sans-clean" style={{ color: "hsl(0 0% 35%)" }}>
             A collective of relentless strategists, visionaries, and execution experts — united by one mission: to build brands that last and businesses that thrive.
           </p>
         </div>
       </section>
 
       {/* Divider */}
-      <div className="h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
+      <div className="h-px bg-gradient-to-r from-transparent via-black/10 to-transparent" />
 
       {/* Mission Strip — white background, separating from black hero */}
       <section className="bg-background py-16 border-b border-border">
@@ -139,14 +139,14 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values Section — pure black, contrasts with white team section above */}
-      <section className="py-24" style={{ background: "hsl(0 0% 4%)" }}>
+      {/* Values Section — light gray, contrasts with white team section above */}
+      <section className="py-24" style={{ background: "hsl(0 0% 93%)" }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
-            <p className="text-xs tracking-[0.3em] uppercase font-medium mb-4" style={{ color: "hsl(0 0% 55%)" }}>
+            <p className="text-xs tracking-[0.3em] uppercase font-medium mb-4" style={{ color: "hsl(0 0% 40%)" }}>
               What Drives Us
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white">
+            <h2 className="font-display text-4xl md:text-5xl font-bold" style={{ color: "hsl(0 0% 8%)" }}>
               Our Core Values
             </h2>
           </div>
@@ -167,13 +167,14 @@ const About = () => {
             ].map((value) => (
               <div
                 key={value.title}
-                className="border border-white/10 p-8 group hover:border-white/30 transition-all duration-300 hover:bg-white/[0.03]"
+                className="border p-8 group hover:border-black/20 transition-all duration-300 hover:bg-black/[0.03]"
+                style={{ borderColor: "hsl(0 0% 78%)" }}
               >
-                <div className="w-8 h-px bg-white/40 mb-6 transition-all duration-300 group-hover:w-14 group-hover:bg-white/70" />
-                <h3 className="font-display text-xl font-semibold text-white mb-4">
+                <div className="w-8 h-px mb-6 transition-all duration-300 group-hover:w-14" style={{ background: "hsl(0 0% 40%)" }} />
+                <h3 className="font-display text-xl font-semibold mb-4" style={{ color: "hsl(0 0% 8%)" }}>
                   {value.title}
                 </h3>
-                <p className="text-white/45 text-sm leading-relaxed group-hover:text-white/65 transition-colors duration-300 font-sans-clean">
+                <p className="text-sm leading-relaxed font-sans-clean transition-colors duration-300" style={{ color: "hsl(0 0% 45%)" }}>
                   {value.desc}
                 </p>
               </div>
@@ -183,12 +184,12 @@ const About = () => {
       </section>
 
       {/* Footer — slightly lighter than section above so it reads as separate */}
-      <footer className="border-t border-white/10 py-10" style={{ background: "hsl(0 0% 7%)" }}>
+      <footer className="border-t py-10" style={{ background: "hsl(0 0% 88%)", borderColor: "hsl(0 0% 78%)" }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/30 text-xs tracking-widest uppercase font-sans-clean">
+          <p className="text-xs tracking-widest uppercase font-sans-clean" style={{ color: "hsl(0 0% 45%)" }}>
             © {new Date().getFullYear()} Dovetail Strategic. All rights reserved.
           </p>
-          <p className="text-xs tracking-widest uppercase font-sans-clean" style={{ color: "hsl(0 0% 55%)" }}>
+          <p className="text-xs tracking-widest uppercase font-sans-clean" style={{ color: "hsl(0 0% 40%)" }}>
             Building Legacies. Driving Results.
           </p>
         </div>

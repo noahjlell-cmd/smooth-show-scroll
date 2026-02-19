@@ -75,7 +75,7 @@ const TeamCard = ({ member }: { member: TeamMember }) => {
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="max-w-3xl p-0 overflow-hidden border-0 bg-transparent shadow-none">
           <DialogTitle className="sr-only">{member.name}</DialogTitle>
-          <div className="flex flex-col md:flex-row" style={{ background: "hsl(0 0% 6%)" }}>
+          <div className="flex flex-col md:flex-row" style={{ background: "hsl(0 0% 93%)" }}>
             {/* Image */}
             <div className="md:w-2/5 shrink-0">
               <img
@@ -87,15 +87,15 @@ const TeamCard = ({ member }: { member: TeamMember }) => {
             </div>
             {/* Info */}
             <div className="md:w-3/5 p-8 md:p-10 flex flex-col justify-center overflow-y-auto max-h-[80vh]">
-              <div className="w-10 h-px bg-white/50 mb-6" />
-              <h2 className="font-display text-3xl font-bold text-white mb-2">
+              <div className="w-10 h-px mb-6" style={{ background: "hsl(0 0% 40%)" }} />
+              <h2 className="font-display text-3xl font-bold mb-2" style={{ color: "hsl(0 0% 8%)" }}>
                 {member.name}
               </h2>
-              <p className="text-white/50 text-xs tracking-[0.2em] uppercase font-sans-clean mb-6">
+              <p className="text-xs tracking-[0.2em] uppercase font-sans-clean mb-6" style={{ color: "hsl(0 0% 45%)" }}>
                 {member.title}
               </p>
-              <div className="h-px bg-white/10 mb-6" />
-              <p className="text-white/75 text-sm leading-relaxed font-sans-clean">
+              <div className="h-px mb-6" style={{ background: "hsl(0 0% 80%)" }} />
+              <p className="text-sm leading-relaxed font-sans-clean" style={{ color: "hsl(0 0% 30%)" }}>
                 {member.bio}
               </p>
             </div>
