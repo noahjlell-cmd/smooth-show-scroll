@@ -4,33 +4,33 @@
 
 @layer base {
   :root {
-    --background: 0 0% 97%;
-    --foreground: 220 20% 10%;
+    --background: 0 0% 98%;
+    --foreground: 220 40% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 20% 10%;
+    --card-foreground: 220 40% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 10%;
+    --popover-foreground: 220 40% 8%;
 
-    --primary: 24 80% 48%;
+    --primary: 220 40% 18%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 94%;
-    --secondary-foreground: 220 20% 10%;
+    --secondary: 220 20% 94%;
+    --secondary-foreground: 220 40% 8%;
 
-    --muted: 220 15% 94%;
-    --muted-foreground: 220 10% 50%;
+    --muted: 220 20% 94%;
+    --muted-foreground: 220 15% 45%;
 
-    --accent: 24 80% 48%;
+    --accent: 220 40% 18%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 88%;
-    --ring: 24 80% 48%;
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --ring: 220 40% 18%;
 
     --radius: 0.5rem;
 
@@ -43,8 +43,8 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    --gold: 38 72% 52%;
-    --gold-light: 42 85% 72%;
+    --gold: 220 40% 30%;
+    --gold-light: 220 30% 55%;
     --dark-navy: 220 40% 8%;
   }
 
@@ -55,19 +55,19 @@
     --card-foreground: 210 40% 98%;
     --popover: 220 30% 12%;
     --popover-foreground: 210 40% 98%;
-    --primary: 24 80% 55%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 0 0% 95%;
+    --primary-foreground: 220 40% 8%;
     --secondary: 220 25% 18%;
     --secondary-foreground: 210 40% 98%;
     --muted: 220 25% 18%;
     --muted-foreground: 215 20% 65%;
-    --accent: 24 80% 55%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 0 0% 95%;
+    --accent-foreground: 220 40% 8%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
     --border: 220 25% 20%;
     --input: 220 25% 20%;
-    --ring: 24 80% 55%;
+    --ring: 0 0% 95%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -101,15 +101,15 @@
   }
 
   .text-gold {
-    color: hsl(var(--gold));
+    color: hsl(0 0% 78%);
   }
 
   .bg-gold {
-    background-color: hsl(var(--gold));
+    background-color: hsl(0 0% 78%);
   }
 
   .border-gold {
-    border-color: hsl(var(--gold));
+    border-color: hsl(0 0% 78%);
   }
 
   .bg-dark-navy {
