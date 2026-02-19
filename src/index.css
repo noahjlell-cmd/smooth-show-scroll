@@ -84,13 +84,13 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Georgia', serif;
+    font-family: 'Arial', sans-serif;
   }
 }
 
 @layer utilities {
   .font-display {
-    font-family: 'Georgia', 'Times New Roman', serif;
+    font-family: 'Arial', sans-serif;
     letter-spacing: -0.02em;
   }
 
