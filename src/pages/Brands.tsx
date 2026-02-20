@@ -9,18 +9,38 @@ import camelbak from "@/assets/brand-camelbak.png";
 import carhartt from "@/assets/brand-carhartt.png";
 import columbia from "@/assets/brand-columbia.png";
 import gfore from "@/assets/brand-gfore.png";
+import hydroflask from "@/assets/brand-hydroflask.png";
+import adidas from "@/assets/brand-adidas.png";
+import melin from "@/assets/brand-melin.png";
+import jbl from "@/assets/brand-jbl.png";
+import johnnieo from "@/assets/brand-johnnieo.png";
+import tumi from "@/assets/brand-tumi.png";
+import mophie from "@/assets/brand-mophie.png";
+import nike from "@/assets/brand-nike.png";
+import northface from "@/assets/brand-northface.png";
+import owala from "@/assets/brand-owala.png";
 
 const brands = [
-  { name: "Herschel Supply Co.", img: herschel, category: "Bags & Accessories" },
-  { name: "Bose", img: bose, category: "Audio & Tech" },
-  { name: "OGIO", img: ogio, category: "Bags & Gear" },
-  { name: "Stanley", img: stanley, category: "Drinkware" },
-  { name: "Arctic Zone", img: arcticzone, category: "Coolers & Drinkware" },
-  { name: "Bella+Canvas", img: bellacanvas, category: "Apparel" },
-  { name: "CamelBak", img: camelbak, category: "Hydration" },
-  { name: "Carhartt", img: carhartt, category: "Workwear & Apparel" },
+  { name: "Nike", img: nike, category: "Sportswear & Apparel" },
+  { name: "Adidas", img: adidas, category: "Sportswear & Apparel" },
+  { name: "The North Face", img: northface, category: "Outdoor Apparel" },
   { name: "Columbia", img: columbia, category: "Outdoor Apparel" },
+  { name: "Carhartt", img: carhartt, category: "Workwear & Apparel" },
+  { name: "Bella+Canvas", img: bellacanvas, category: "Apparel" },
+  { name: "johnnie-O", img: johnnieo, category: "Golf & Lifestyle" },
   { name: "G/FORE", img: gfore, category: "Golf & Lifestyle" },
+  { name: "Melin", img: melin, category: "Headwear" },
+  { name: "Herschel Supply Co.", img: herschel, category: "Bags & Accessories" },
+  { name: "OGIO", img: ogio, category: "Bags & Gear" },
+  { name: "TUMI", img: tumi, category: "Luggage & Bags" },
+  { name: "Stanley", img: stanley, category: "Drinkware" },
+  { name: "Hydro Flask", img: hydroflask, category: "Drinkware" },
+  { name: "CamelBak", img: camelbak, category: "Hydration" },
+  { name: "Owala", img: owala, category: "Drinkware" },
+  { name: "Arctic Zone", img: arcticzone, category: "Coolers & Drinkware" },
+  { name: "Bose", img: bose, category: "Audio & Tech" },
+  { name: "JBL", img: jbl, category: "Audio & Tech" },
+  { name: "Mophie", img: mophie, category: "Tech Accessories" },
 ];
 
 const Brands = () => {
@@ -61,7 +81,7 @@ const Brands = () => {
           style={{ borderColor: "hsl(0 0% 78%)" }}
         >
           {[
-            { value: "10+", label: "Brand Partners" },
+            { value: "20+", label: "Brand Partners" },
             { value: "500+", label: "Products Sourced" },
             { value: "100%", label: "Premium Quality" },
           ].map((s, i) => (
