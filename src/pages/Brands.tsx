@@ -19,6 +19,14 @@ import mophie from "@/assets/brand-mophie.png";
 import nike from "@/assets/brand-nike.png";
 import northface from "@/assets/brand-northface.png";
 import owala from "@/assets/brand-owala.png";
+import petermillar from "@/assets/brand-petermillar.png";
+import imperial from "@/assets/brand-imperial.png";
+import yeti from "@/assets/brand-yeti.png";
+import stitch from "@/assets/brand-stitch.png";
+import thule from "@/assets/brand-thule.png";
+import underarmour from "@/assets/brand-underarmour.png";
+import rtic from "@/assets/brand-rtic.png";
+import patagonia from "@/assets/brand-patagonia.png";
 
 const brands = [
   { name: "Nike", img: nike, category: "Sportswear & Apparel" },
@@ -38,9 +46,17 @@ const brands = [
   { name: "CamelBak", img: camelbak, category: "Hydration" },
   { name: "Owala", img: owala, category: "Drinkware" },
   { name: "Arctic Zone", img: arcticzone, category: "Coolers & Drinkware" },
+  { name: "YETI", img: yeti, category: "Drinkware & Coolers" },
+  { name: "RTIC", img: rtic, category: "Drinkware & Coolers" },
   { name: "Bose", img: bose, category: "Audio & Tech" },
   { name: "JBL", img: jbl, category: "Audio & Tech" },
   { name: "Mophie", img: mophie, category: "Tech Accessories" },
+  { name: "Peter Millar", img: petermillar, category: "Luxury Apparel" },
+  { name: "Patagonia", img: patagonia, category: "Outdoor Apparel" },
+  { name: "Under Armour", img: underarmour, category: "Sportswear & Apparel" },
+  { name: "Imperial", img: imperial, category: "Headwear" },
+  { name: "Stitch", img: stitch, category: "Custom Branding" },
+  { name: "Thule", img: thule, category: "Bags & Gear" },
 ];
 
 const Brands = () => {
@@ -81,7 +97,7 @@ const Brands = () => {
           style={{ borderColor: "hsl(0 0% 78%)" }}
         >
           {[
-            { value: "20+", label: "Brand Partners" },
+            { value: "30+", label: "Brand Partners" },
             { value: "500+", label: "Products Sourced" },
             { value: "100%", label: "Premium Quality" },
           ].map((s, i) => (
