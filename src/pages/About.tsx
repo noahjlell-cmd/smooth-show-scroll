@@ -9,6 +9,14 @@ import melissaImg from "@/assets/team-5-melissa.png";
 import anaImg from "@/assets/team-6-ana.png";
 import jcImg from "@/assets/team-7-jc.png";
 import archieImg from "@/assets/team-8-archie.png";
+import michelleImg from "@/assets/team-9-michelle.png";
+import rogerickImg from "@/assets/team-10-rogerick.png";
+import sharmaineImg from "@/assets/team-11-sharmaine.png";
+import tylerImg from "@/assets/team-12-tyler.png";
+import cristineImg from "@/assets/team-13-cristine.png";
+import erinImg from "@/assets/team-14-erin.png";
+import jessImg from "@/assets/team-15-jess.png";
+import loryImg from "@/assets/team-16-lory.png";
 
 const teamMembers = [
   {
@@ -58,6 +66,54 @@ const teamMembers = [
     title: "Customer Success",
     image: archieImg,
     bio: "Archie is a dedicated professional with a passion for providing exceptional customer service. With a proven track record as a customer service expert, team leader, and subject matter expert, he brings enthusiasm to every interaction. He thrives on delivering solutions that leave customers satisfied and is recognized for in-depth knowledge that enriches every customer interaction. Beyond professional accomplishments, Archie is deeply passionate about making a positive impact on the lives of others.",
+  },
+  {
+    name: "Michelle Honra",
+    title: "Team Member",
+    image: michelleImg,
+    bio: "",
+  },
+  {
+    name: "Rogerick Ambait",
+    title: "Team Member",
+    image: rogerickImg,
+    bio: "",
+  },
+  {
+    name: "Sharmaine Gayanes",
+    title: "Team Member",
+    image: sharmaineImg,
+    bio: "",
+  },
+  {
+    name: "Tyler Hess",
+    title: "Team Member",
+    image: tylerImg,
+    bio: "",
+  },
+  {
+    name: "Cristine Bulgariu",
+    title: "Team Member",
+    image: cristineImg,
+    bio: "",
+  },
+  {
+    name: "Erin Mccormick",
+    title: "Team Member",
+    image: erinImg,
+    bio: "",
+  },
+  {
+    name: "Jess Irish Domingo",
+    title: "Team Member",
+    image: jessImg,
+    bio: "",
+  },
+  {
+    name: "Lory Tuazon",
+    title: "Team Member",
+    image: loryImg,
+    bio: "",
   },
 ];
 
