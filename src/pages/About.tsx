@@ -111,7 +111,7 @@ const teamMembers = [
   },
   {
     name: "Lory Tuazon",
-    title: "Team Member",
+    title: "Accounting Associate",
     image: loryImg,
     bio: "",
   },
