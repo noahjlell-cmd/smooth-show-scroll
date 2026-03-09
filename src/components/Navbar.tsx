@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -11,6 +13,10 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [location.pathname]);
 
   const navLinks = [
     { label: "About", path: "/about" },
@@ -29,7 +35,6 @@ const Navbar = () => {
       style={scrolled ? { background: "hsl(0 0% 92% / 0.97)", borderColor: "hsl(0 0% 78%)" } : {}}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-20">
-        {/* Logo */}
         <Link to="/" className="flex items-center group">
           <img
             src={logo}
@@ -38,7 +43,7 @@ const Navbar = () => {
           />
         </Link>
 
-        {/* Nav Links */}
+        {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => (
             <Link
@@ -61,7 +66,42 @@ const Navbar = () => {
             Get Started
           </Link>
         </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden p-2 text-foreground"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="Toggle menu"
+        >
+          {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
       </div>
+
+      {/* Mobile Nav */}
+      {mobileOpen && (
+        <div className="md:hidden border-t bg-background/95 backdrop-blur-md" style={{ borderColor: "hsl(0 0% 78%)" }}>
+          <div className="flex flex-col px-6 py-6 gap-4">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`text-sm tracking-widest uppercase font-medium py-2 ${
+                  location.pathname === link.path ? "text-foreground" : "text-muted-foreground"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <Link
+              to="/contact"
+              className="mt-2 px-6 py-2.5 text-sm tracking-widest uppercase font-medium border text-foreground text-center"
+              style={{ borderColor: "hsl(0 0% 30%)" }}
+            >
+              Get Started
+            </Link>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
