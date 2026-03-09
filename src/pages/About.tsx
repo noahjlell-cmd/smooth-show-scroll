@@ -63,7 +63,7 @@ const teamMembers = [
   },
   {
     name: "Archie",
-    title: "Customer Success",
+    title: "Account Manager",
     image: archieImg,
     bio: "Archie is a dedicated professional with a passion for providing exceptional customer service. With a proven track record as a customer service expert, team leader, and subject matter expert, he brings enthusiasm to every interaction. He thrives on delivering solutions that leave customers satisfied and is recognized for in-depth knowledge that enriches every customer interaction. Beyond professional accomplishments, Archie is deeply passionate about making a positive impact on the lives of others.",
   },
