@@ -45,7 +45,7 @@ const teamMembers = [
   },
   {
     name: "Melissa",
-    title: "Sales & Marketing",
+    title: "Sr Account Manager",
     image: melissaImg,
     bio: "Melissa has proven herself to be an exceptional talent, driven by unwavering commitment to meeting and exceeding customer needs. With remarkable proficiency in promotional marketing, she consistently exceeds sales targets — showcasing her innate ability to drive results. Beyond her professional accomplishments, Melissa is a devoted wife and mother of three boys who treasures her time outdoors, fishing, enjoying the beach, and spending quality moments with family and friends.",
   },
