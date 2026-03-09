@@ -105,7 +105,7 @@ const teamMembers = [
   },
   {
     name: "Jess Irish Domingo",
-    title: "Team Member",
+    title: "Executive Assistant To CEO",
     image: jessImg,
     bio: "",
   },
