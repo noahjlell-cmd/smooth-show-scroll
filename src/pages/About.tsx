@@ -86,8 +86,8 @@ const teamMembers = [
     bio: "",
   },
   {
-    name: "Tyler Hess",
-    title: "Team Member",
+    name: "Tyeler Hess",
+    title: "Sr Account Manager",
     image: tylerImg,
     bio: "",
   },
