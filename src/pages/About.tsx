@@ -39,7 +39,7 @@ const teamMembers = [
   },
   {
     name: "Karol",
-    title: "Team Lead",
+    title: "Sr Account Manager",
     image: karolImg,
     bio: "Karol is a perpetually energetic individual with an unmistakable passion for life. A self-professed workaholic, she finds fulfillment in pushing the boundaries of what's possible. At home, she loves her husband Ender and is a proud mommy to two incredible girls. She's also a proud parent to her two beloved huskies, Ghost and Nymeria. Outside of home life, Karol can often be found exploring the great outdoors or diving headfirst into a thrilling book or movie.",
   },
