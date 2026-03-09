@@ -94,11 +94,11 @@ const Contact = () => {
                 Direct Contact
               </p>
               <a
-                href="mailto:hello@dovetailstrategic.com"
+                href="mailto:contact@dovetailstrategic.com"
                 className="text-sm font-medium transition-colors duration-200 hover:opacity-60"
                 style={{ color: "hsl(0 0% 8%)" }}
               >
-                hello@dovetailstrategic.com
+                contact@dovetailstrategic.com
               </a>
             </div>
           </div>

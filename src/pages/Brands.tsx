@@ -97,8 +97,8 @@ const Brands = () => {
           style={{ borderColor: "hsl(0 0% 78%)" }}
         >
           {[
-            { value: "30+", label: "Brand Partners" },
-            { value: "500+", label: "Products Sourced" },
+            { value: "200+", label: "Brand Partners" },
+            { value: "1000+", label: "Unique Products Sourced" },
             { value: "100%", label: "Premium Quality" },
           ].map((s, i) => (
             <div
