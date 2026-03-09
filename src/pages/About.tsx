@@ -93,7 +93,7 @@ const teamMembers = [
   },
   {
     name: "Cristine Bulgariu",
-    title: "Team Member",
+    title: "Account Manager",
     image: cristineImg,
     bio: "",
   },
