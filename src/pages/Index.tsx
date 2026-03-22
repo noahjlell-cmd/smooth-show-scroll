@@ -27,21 +27,25 @@ const services = [
     number: "01",
     title: "Brand Strategy",
     desc: "We craft purposeful brand identities that resonate with your audience and drive measurable growth.",
+    icon: Lightbulb,
   },
   {
     number: "02",
     title: "Product Sourcing",
     desc: "Access 1000+ unique products from 200+ premium brand partners, curated for your vision.",
+    icon: Search,
   },
   {
     number: "03",
     title: "Custom Merchandise",
     desc: "From concept to delivery — branded merchandise programs that elevate your company culture.",
+    icon: Package,
   },
   {
     number: "04",
     title: "Corporate Gifting",
     desc: "Thoughtful, high-impact gifting solutions that strengthen relationships and leave lasting impressions.",
+    icon: Gift,
   },
 ];
 
