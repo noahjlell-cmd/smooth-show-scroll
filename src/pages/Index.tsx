@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Lightbulb, Search, Package, Gift } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import logo from "@/assets/logo.png";
 
