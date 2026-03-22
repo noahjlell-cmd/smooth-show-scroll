@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Lightbulb, Search, Package, Gift } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import logo from "@/assets/logo.png";
 
@@ -26,21 +27,25 @@ const services = [
     number: "01",
     title: "Brand Strategy",
     desc: "We craft purposeful brand identities that resonate with your audience and drive measurable growth.",
+    icon: Lightbulb,
   },
   {
     number: "02",
     title: "Product Sourcing",
     desc: "Access 1000+ unique products from 200+ premium brand partners, curated for your vision.",
+    icon: Search,
   },
   {
     number: "03",
     title: "Custom Merchandise",
     desc: "From concept to delivery — branded merchandise programs that elevate your company culture.",
+    icon: Package,
   },
   {
     number: "04",
     title: "Corporate Gifting",
     desc: "Thoughtful, high-impact gifting solutions that strengthen relationships and leave lasting impressions.",
+    icon: Gift,
   },
 ];
 
@@ -155,12 +160,15 @@ const Index = () => {
                 key={service.number}
                 className="bg-background p-10 md:p-14 group hover:bg-[hsl(0_0%_96%)] transition-colors duration-300"
               >
-                <span
-                  className="font-display text-5xl font-bold block mb-6 transition-colors duration-300"
-                  style={{ color: "hsl(0 0% 88%)" }}
-                >
-                  {service.number}
-                </span>
+                <div className="flex items-center gap-4 mb-6">
+                  <service.icon className="w-8 h-8" style={{ color: "hsl(0 0% 45%)" }} strokeWidth={1.5} />
+                  <span
+                    className="font-display text-5xl font-bold transition-colors duration-300"
+                    style={{ color: "hsl(0 0% 88%)" }}
+                  >
+                    {service.number}
+                  </span>
+                </div>
                 <h3 className="font-display text-2xl font-semibold text-foreground mb-4">
                   {service.title}
                 </h3>
