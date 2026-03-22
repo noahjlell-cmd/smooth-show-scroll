@@ -160,12 +160,15 @@ const Index = () => {
                 key={service.number}
                 className="bg-background p-10 md:p-14 group hover:bg-[hsl(0_0%_96%)] transition-colors duration-300"
               >
-                <span
-                  className="font-display text-5xl font-bold block mb-6 transition-colors duration-300"
-                  style={{ color: "hsl(0 0% 88%)" }}
-                >
-                  {service.number}
-                </span>
+                <div className="flex items-center gap-4 mb-6">
+                  <service.icon className="w-8 h-8" style={{ color: "hsl(0 0% 45%)" }} strokeWidth={1.5} />
+                  <span
+                    className="font-display text-5xl font-bold transition-colors duration-300"
+                    style={{ color: "hsl(0 0% 88%)" }}
+                  >
+                    {service.number}
+                  </span>
+                </div>
                 <h3 className="font-display text-2xl font-semibold text-foreground mb-4">
                   {service.title}
                 </h3>
