@@ -7,6 +7,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
+  const isHome = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -49,10 +50,14 @@ const Navbar = () => {
             <Link
               key={link.path}
               to={link.path}
-              className={`relative text-sm tracking-widest uppercase font-medium transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-px after:bg-foreground after:transition-all after:duration-300 ${
-                location.pathname === link.path
-                  ? "text-foreground after:w-full"
-                  : "text-muted-foreground hover:text-foreground after:w-0 hover:after:w-full"
+              className={`relative text-sm tracking-widest uppercase font-medium transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-px after:transition-all after:duration-300 ${
+                isHome && !scrolled
+                  ? location.pathname === link.path
+                    ? "text-white after:w-full after:bg-white"
+                    : "text-white/60 hover:text-white after:w-0 hover:after:w-full after:bg-white"
+                  : location.pathname === link.path
+                    ? "text-foreground after:w-full after:bg-foreground"
+                    : "text-muted-foreground hover:text-foreground after:w-0 hover:after:w-full after:bg-foreground"
               }`}
             >
               {link.label}
@@ -60,8 +65,12 @@ const Navbar = () => {
           ))}
           <Link
             to="/contact"
-            className="px-6 py-2.5 text-sm tracking-widest uppercase font-medium transition-all duration-300 border text-foreground hover:bg-foreground hover:text-background hover:-translate-y-0.5"
-            style={{ borderColor: "hsl(0 0% 30%)" }}
+            className={`px-6 py-2.5 text-sm tracking-widest uppercase font-medium transition-all duration-300 border hover:-translate-y-0.5 ${
+              isHome && !scrolled
+                ? "border-white/30 text-white hover:bg-white hover:text-black"
+                : "text-foreground hover:bg-foreground hover:text-background"
+            }`}
+            style={isHome && !scrolled ? {} : { borderColor: "hsl(0 0% 30%)" }}
           >
             Get Started
           </Link>
@@ -69,7 +78,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2 text-foreground"
+          className={`md:hidden p-2 ${isHome && !scrolled ? "text-white" : "text-foreground"}`}
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
