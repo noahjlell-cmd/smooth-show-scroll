@@ -39,7 +39,7 @@ const Navbar = () => {
           <img
             src={logo}
             alt="Dovetail Strategic"
-            className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+            className={`h-12 w-auto transition-all duration-300 group-hover:scale-105 ${!scrolled ? "brightness-[1.8]" : ""}`}
           />
         </Link>
 
