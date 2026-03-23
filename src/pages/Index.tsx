@@ -62,9 +62,9 @@ const Index = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ background: "hsl(0 0% 5%)" }}>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ background: "linear-gradient(180deg, hsl(215 25% 15%) 0%, hsl(215 20% 10%) 40%, hsl(0 0% 5%) 100%)" }}>
         <div
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.04]"
           style={{
             backgroundImage: "repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)",
             backgroundSize: "24px 24px",
@@ -74,7 +74,7 @@ const Index = () => {
           <img
             src={logo}
             alt="Dovetail Strategic"
-            className="h-16 w-auto mx-auto mb-10 opacity-80"
+            className="h-16 w-auto mx-auto mb-10 brightness-[1.8]"
           />
           <p
             className="text-xs tracking-[0.35em] uppercase font-medium mb-8"
