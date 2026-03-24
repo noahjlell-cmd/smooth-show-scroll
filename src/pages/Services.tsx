@@ -37,7 +37,7 @@ const caseStudies = [
     title: "Live Event Gear Shop",
     client: "In-Person Apparel Experience",
     challenge:
-      "Client asked us to create an interactive "Shop" for users to choose their preferred items based on a touch, feel, and try experience.",
+      'Client asked us to create an interactive "Shop" for users to choose their preferred items based on a touch, feel, and try experience.',
     solution:
       "Dovetail set up and hosted an in-person Apparel Shop staffed by our team. Staff provided answers on apparel and ensured each attendee's order was properly recorded. Attendees walked away with branded hard goods while custom apparel was fulfilled and shipped.",
     image: caseLiveEvent,
