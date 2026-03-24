@@ -7,7 +7,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
-  const hasDarkHero = ["/", "/about", "/contact"].includes(location.pathname);
+  const hasDarkHero = ["/", "/about", "/brands", "/contact"].includes(location.pathname);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
