@@ -19,7 +19,7 @@ const caseStudies = [
     title: "Savings on Shipping Swag",
     client: "Event Swag Distribution",
     challenge:
-      "Client needed an exciting "band swag" experience for an event, featuring unique bundles for each recipient to choose from.",
+      'Client needed an exciting "band swag" experience for an event, featuring unique bundles for each recipient to choose from.',
     solution:
       "Dovetail launched a seamless online ordering system with customizable options. We created unique collections by bundling items, along with the choice of a hat or tote. Dovetail facilitated distribution to approximately 1,200 attendees in three hours, saving the client money on distribution and shipping.",
     image: caseShipping,
