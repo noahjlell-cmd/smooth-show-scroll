@@ -67,26 +67,26 @@ const Brands = () => {
       {/* Hero */}
       <section
         className="relative pt-40 pb-28 px-6 overflow-hidden"
-        style={{ background: "hsl(0 0% 93%)" }}
+        style={{ background: "linear-gradient(180deg, hsl(215 25% 15%) 0%, hsl(215 20% 10%) 40%, hsl(0 0% 5%) 100%)" }}
       >
         {/* Decorative grid lines */}
         <div
-          className="absolute inset-0 opacity-[0.06]"
+          className="absolute inset-0 opacity-[0.04]"
           style={{
-            backgroundImage: `repeating-linear-gradient(0deg, hsl(0 0% 0%) 0px, hsl(0 0% 0%) 1px, transparent 1px, transparent 80px),
-              repeating-linear-gradient(90deg, hsl(0 0% 0%) 0px, hsl(0 0% 0%) 1px, transparent 1px, transparent 80px)`,
+            backgroundImage: `repeating-linear-gradient(0deg, hsl(0 0% 100%) 0px, hsl(0 0% 100%) 1px, transparent 1px, transparent 80px),
+              repeating-linear-gradient(90deg, hsl(0 0% 100%) 0px, hsl(0 0% 100%) 1px, transparent 1px, transparent 80px)`,
           }}
         />
         <div className="relative max-w-5xl mx-auto text-center">
-          <p className="text-xs tracking-[0.35em] uppercase mb-6" style={{ color: "hsl(0 0% 50%)" }}>
+          <p className="text-xs tracking-[0.35em] uppercase mb-6" style={{ color: "hsl(0 0% 60%)" }}>
             Our Portfolio
           </p>
-          <h1 className="text-6xl md:text-8xl font-bold tracking-tight leading-none mb-8" style={{ color: "hsl(0 0% 8%)" }}>
+          <h1 className="text-6xl md:text-8xl font-bold tracking-tight leading-none mb-8" style={{ color: "hsl(0 0% 98%)" }}>
             Brands We
             <br />
-            <span style={{ color: "hsl(0 0% 35%)" }}>Work With</span>
+            <span style={{ color: "hsl(0 0% 65%)" }}>Work With</span>
           </h1>
-          <p className="text-lg max-w-xl mx-auto leading-relaxed" style={{ color: "hsl(0 0% 40%)" }}>
+          <p className="text-lg max-w-xl mx-auto leading-relaxed" style={{ color: "hsl(0 0% 55%)" }}>
             We partner with the world's most recognized brands to deliver premium promotional products and branded merchandise.
           </p>
         </div>
@@ -94,7 +94,7 @@ const Brands = () => {
         {/* Stat bar */}
         <div
           className="relative max-w-4xl mx-auto mt-20 grid grid-cols-3 border-t"
-          style={{ borderColor: "hsl(0 0% 78%)" }}
+          style={{ borderColor: "hsl(0 0% 25%)" }}
         >
           {[
             { value: "200+", label: "Brand Partners" },
@@ -104,10 +104,10 @@ const Brands = () => {
             <div
               key={i}
               className={`pt-8 text-center ${i < 2 ? "border-r" : ""}`}
-              style={{ borderColor: "hsl(0 0% 78%)" }}
+              style={{ borderColor: "hsl(0 0% 25%)" }}
             >
-              <div className="text-4xl font-bold mb-1" style={{ color: "hsl(0 0% 8%)" }}>{s.value}</div>
-              <div className="text-xs tracking-widest uppercase" style={{ color: "hsl(0 0% 50%)" }}>{s.label}</div>
+              <div className="text-4xl font-bold mb-1" style={{ color: "hsl(0 0% 98%)" }}>{s.value}</div>
+              <div className="text-xs tracking-widest uppercase" style={{ color: "hsl(0 0% 55%)" }}>{s.label}</div>
             </div>
           ))}
         </div>
