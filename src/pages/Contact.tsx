@@ -23,22 +23,22 @@ const Contact = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative pt-40 pb-20 px-6 overflow-hidden" style={{ background: "hsl(0 0% 93%)" }}>
+      <section className="relative pt-40 pb-20 px-6 overflow-hidden" style={{ background: "linear-gradient(180deg, hsl(215 25% 15%) 0%, hsl(215 20% 10%) 40%, hsl(0 0% 5%) 100%)" }}>
         <div
-          className="absolute inset-0 opacity-[0.05]"
+          className="absolute inset-0 opacity-[0.04]"
           style={{
-            backgroundImage: `repeating-linear-gradient(0deg, hsl(0 0% 0%) 0px, hsl(0 0% 0%) 1px, transparent 1px, transparent 80px),
-              repeating-linear-gradient(90deg, hsl(0 0% 0%) 0px, hsl(0 0% 0%) 1px, transparent 1px, transparent 80px)`,
+            backgroundImage: `repeating-linear-gradient(0deg, hsl(0 0% 100%) 0px, hsl(0 0% 100%) 1px, transparent 1px, transparent 80px),
+              repeating-linear-gradient(90deg, hsl(0 0% 100%) 0px, hsl(0 0% 100%) 1px, transparent 1px, transparent 80px)`,
           }}
         />
         <div className="relative max-w-5xl mx-auto">
-          <p className="text-xs tracking-[0.35em] uppercase mb-6" style={{ color: "hsl(0 0% 50%)" }}>
+          <p className="text-xs tracking-[0.35em] uppercase mb-6" style={{ color: "hsl(0 0% 55%)" }}>
             Get In Touch
           </p>
-          <h1 className="text-6xl md:text-8xl font-bold tracking-tight leading-none" style={{ color: "hsl(0 0% 8%)" }}>
+          <h1 className="text-6xl md:text-8xl font-bold tracking-tight leading-none" style={{ color: "hsl(0 0% 98%)" }}>
             Let's Build
             <br />
-            <span style={{ color: "hsl(0 0% 35%)" }}>Something Great</span>
+            <span style={{ color: "hsl(0 0% 55%)" }}>Something Great</span>
           </h1>
         </div>
       </section>

@@ -7,7 +7,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
-  const isHome = location.pathname === "/";
+  const hasDarkHero = ["/", "/about", "/brands", "/contact"].includes(location.pathname);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -51,7 +51,7 @@ const Navbar = () => {
               key={link.path}
               to={link.path}
               className={`relative text-sm tracking-widest uppercase font-medium transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-px after:transition-all after:duration-300 ${
-                isHome && !scrolled
+                hasDarkHero && !scrolled
                   ? location.pathname === link.path
                     ? "text-white after:w-full after:bg-white"
                     : "text-white/60 hover:text-white after:w-0 hover:after:w-full after:bg-white"
@@ -66,11 +66,11 @@ const Navbar = () => {
           <Link
             to="/contact"
             className={`px-6 py-2.5 text-sm tracking-widest uppercase font-medium transition-all duration-300 border hover:-translate-y-0.5 ${
-              isHome && !scrolled
+              hasDarkHero && !scrolled
                 ? "border-white/30 text-white hover:bg-white hover:text-black"
                 : "text-foreground hover:bg-foreground hover:text-background"
             }`}
-            style={isHome && !scrolled ? {} : { borderColor: "hsl(0 0% 30%)" }}
+            style={hasDarkHero && !scrolled ? {} : { borderColor: "hsl(0 0% 30%)" }}
           >
             Get Started
           </Link>
@@ -78,7 +78,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className={`md:hidden p-2 ${isHome && !scrolled ? "text-white" : "text-foreground"}`}
+          className={`md:hidden p-2 ${hasDarkHero && !scrolled ? "text-white" : "text-foreground"}`}
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
