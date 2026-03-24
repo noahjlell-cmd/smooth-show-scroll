@@ -122,26 +122,26 @@ const About = () => {
     <div className="min-h-screen bg-background font-sans-clean">
       <Navbar />
 
-      {/* Hero Section — light gray */}
-      <section className="relative overflow-hidden pt-32 pb-24" style={{ background: "hsl(0 0% 93%)" }}>
+      {/* Hero Section — dark gradient */}
+      <section className="relative overflow-hidden pt-32 pb-24" style={{ background: "linear-gradient(180deg, hsl(215 25% 15%) 0%, hsl(215 20% 10%) 40%, hsl(0 0% 5%) 100%)" }}>
         <div
           className="absolute inset-0 opacity-[0.04]"
           style={{
-          backgroundImage:
-              "repeating-linear-gradient(45deg, #000 0, #000 1px, transparent 0, transparent 50%)",
+            backgroundImage:
+              "repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)",
             backgroundSize: "20px 20px",
           }}
         />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-12 text-center">
-          <p className="text-xs tracking-[0.3em] uppercase font-medium mb-6" style={{ color: "hsl(0 0% 40%)" }}>
+          <p className="text-xs tracking-[0.3em] uppercase font-medium mb-6" style={{ color: "hsl(0 0% 55%)" }}>
             Who We Are
           </p>
-          <h1 className="font-display text-5xl md:text-7xl font-bold leading-tight mb-8" style={{ color: "hsl(0 0% 8%)" }}>
+          <h1 className="font-display text-5xl md:text-7xl font-bold leading-tight mb-8" style={{ color: "hsl(0 0% 98%)" }}>
             Meet the Team
-            <span className="block mt-2" style={{ color: "hsl(0 0% 45%)" }}>Behind the Strategy</span>
+            <span className="block mt-2" style={{ color: "hsl(0 0% 55%)" }}>Behind the Strategy</span>
           </h1>
-          <div className="w-16 h-px mx-auto mb-8" style={{ background: "hsl(0 0% 30%)" }} />
-          <p className="text-lg max-w-2xl mx-auto leading-relaxed font-sans-clean" style={{ color: "hsl(0 0% 35%)" }}>
+          <div className="w-16 h-px mx-auto mb-8" style={{ background: "hsl(0 0% 40%)" }} />
+          <p className="text-lg max-w-2xl mx-auto leading-relaxed font-sans-clean" style={{ color: "hsl(0 0% 60%)" }}>
             A collective of relentless strategists, visionaries, and execution experts — united by one mission: to build brands that last and businesses that thrive.
           </p>
         </div>
