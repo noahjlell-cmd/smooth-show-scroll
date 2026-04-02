@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
+import logoWhite from "@/assets/logo-white.png";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
