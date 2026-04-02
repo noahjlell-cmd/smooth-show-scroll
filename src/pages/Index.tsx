@@ -53,7 +53,7 @@ const stats = [
   { value: "200+", label: "Brand Partners" },
   { value: "1000+", label: "Unique Products" },
   { value: "50+", label: "Years Experience" },
-  { value: "7-Figure", label: "Revenue Growth" },
+  { value: "7 - Figure", label: "Revenue Growth" },
 ];
 
 const Index = () => {
