@@ -156,7 +156,7 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {[
               { label: "Founded", value: "2022" },
-              { label: "Revenue Growth", value: "7-Figure" },
+              { label: "Revenue Growth", value: "7 - Figure" },
               { label: "Years of Combined Experience", value: "50+" },
             ].map((stat) => (
               <div key={stat.label} className="text-center group">
