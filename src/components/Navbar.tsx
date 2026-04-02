@@ -39,9 +39,9 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-20">
         <Link to="/" className="flex items-center group">
           <img
-            src={logo}
+            src={hasDarkHero && !scrolled ? logoWhite : logo}
             alt="Dovetail Strategic"
-            className={`h-12 w-auto transition-all duration-300 group-hover:scale-105 ${!scrolled ? "brightness-[1.8]" : ""}`}
+            className="h-12 w-auto transition-all duration-300 group-hover:scale-105"
           />
         </Link>
 
