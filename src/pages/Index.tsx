@@ -72,9 +72,9 @@ const Index = () => {
         />
         <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-12 text-center">
           <img
-            src={logo}
+            src={logoWhite}
             alt="Dovetail Strategic"
-            className="h-16 w-auto mx-auto mb-10 brightness-[1.8]"
+            className="h-16 w-auto mx-auto mb-10"
           />
           <p
             className="text-xs tracking-[0.35em] uppercase font-medium mb-8"
