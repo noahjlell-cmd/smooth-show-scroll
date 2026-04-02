@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Lightbulb, Search, Package, Gift } from "lucide-react";
 import Navbar from "@/components/Navbar";
-import logo from "@/assets/logo.png";
+import logoWhite from "@/assets/logo-white.png";
 
 import brandNike from "@/assets/brand-nike.png";
 import brandPatagonia from "@/assets/brand-patagonia.png";
@@ -72,9 +72,9 @@ const Index = () => {
         />
         <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-12 text-center">
           <img
-            src={logo}
+            src={logoWhite}
             alt="Dovetail Strategic"
-            className="h-16 w-auto mx-auto mb-10 brightness-[1.8]"
+            className="h-16 w-auto mx-auto mb-10"
           />
           <p
             className="text-xs tracking-[0.35em] uppercase font-medium mb-8"
