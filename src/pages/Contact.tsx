@@ -144,7 +144,7 @@ const Contact = () => {
                   Thank you for reaching out. A member of our team will respond within 1–2 business days.
                 </p>
                 <button
-                  onClick={() => { setSubmitted(false); setForm({ name: "", email: "", company: "", service: "", message: "" }); }}
+                  onClick={() => { setSubmitted(false); setErrorMsg(""); setForm({ name: "", email: "", company: "", service: "", message: "" }); }}
                   className="mt-4 text-xs tracking-widest uppercase border-b pb-0.5 transition-opacity duration-200 hover:opacity-50"
                   style={{ borderColor: "hsl(0 0% 30%)", color: "hsl(0 0% 8%)" }}
                 >
@@ -252,11 +252,18 @@ const Contact = () => {
 
                 {/* Submit */}
                 <div className="pt-2">
+                  {errorMsg && (
+                    <p className="text-xs mb-4" style={{ color: "hsl(0 70% 40%)" }}>
+                      {errorMsg}
+                    </p>
+                  )}
                   <button
                     type="submit"
-                    className="group relative px-12 py-4 text-sm tracking-widest uppercase font-medium border transition-all duration-300 overflow-hidden hover:-translate-y-0.5"
+                    disabled={submitting}
+                    className="group relative px-12 py-4 text-sm tracking-widest uppercase font-medium border transition-all duration-300 overflow-hidden hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                     style={{ borderColor: "hsl(0 0% 20%)", color: "hsl(0 0% 8%)" }}
                     onMouseEnter={e => {
+                      if (submitting) return;
                       (e.currentTarget as HTMLElement).style.background = "hsl(0 0% 8%)";
                       (e.currentTarget as HTMLElement).style.color = "hsl(0 0% 98%)";
                     }}
@@ -265,7 +272,7 @@ const Contact = () => {
                       (e.currentTarget as HTMLElement).style.color = "hsl(0 0% 8%)";
                     }}
                   >
-                    Send Message
+                    {submitting ? "Sending…" : "Send Message"}
                   </button>
                 </div>
               </form>
