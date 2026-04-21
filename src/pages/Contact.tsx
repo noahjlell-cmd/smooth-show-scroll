@@ -1,17 +1,44 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", company: "", service: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string>("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    if (submitting) return;
+    setErrorMsg("");
+    setSubmitting(true);
+    try {
+      const idempotencyKey = `contact-${crypto.randomUUID()}`;
+      const { error } = await supabase.functions.invoke("send-transactional-email", {
+        body: {
+          templateName: "contact-form-notification",
+          idempotencyKey,
+          templateData: {
+            name: form.name,
+            email: form.email,
+            company: form.company,
+            service: form.service,
+            message: form.message,
+          },
+        },
+      });
+      if (error) throw error;
+      setSubmitted(true);
+    } catch (err: any) {
+      setErrorMsg(err?.message ?? "Something went wrong. Please try again or email us directly.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const inputBase =
