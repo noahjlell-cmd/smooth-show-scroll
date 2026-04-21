@@ -1,17 +1,44 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", company: "", service: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string>("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    if (submitting) return;
+    setErrorMsg("");
+    setSubmitting(true);
+    try {
+      const idempotencyKey = `contact-${crypto.randomUUID()}`;
+      const { error } = await supabase.functions.invoke("send-transactional-email", {
+        body: {
+          templateName: "contact-form-notification",
+          idempotencyKey,
+          templateData: {
+            name: form.name,
+            email: form.email,
+            company: form.company,
+            service: form.service,
+            message: form.message,
+          },
+        },
+      });
+      if (error) throw error;
+      setSubmitted(true);
+    } catch (err: any) {
+      setErrorMsg(err?.message ?? "Something went wrong. Please try again or email us directly.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const inputBase =
@@ -117,7 +144,7 @@ const Contact = () => {
                   Thank you for reaching out. A member of our team will respond within 1–2 business days.
                 </p>
                 <button
-                  onClick={() => { setSubmitted(false); setForm({ name: "", email: "", company: "", service: "", message: "" }); }}
+                  onClick={() => { setSubmitted(false); setErrorMsg(""); setForm({ name: "", email: "", company: "", service: "", message: "" }); }}
                   className="mt-4 text-xs tracking-widest uppercase border-b pb-0.5 transition-opacity duration-200 hover:opacity-50"
                   style={{ borderColor: "hsl(0 0% 30%)", color: "hsl(0 0% 8%)" }}
                 >
@@ -225,11 +252,18 @@ const Contact = () => {
 
                 {/* Submit */}
                 <div className="pt-2">
+                  {errorMsg && (
+                    <p className="text-xs mb-4" style={{ color: "hsl(0 70% 40%)" }}>
+                      {errorMsg}
+                    </p>
+                  )}
                   <button
                     type="submit"
-                    className="group relative px-12 py-4 text-sm tracking-widest uppercase font-medium border transition-all duration-300 overflow-hidden hover:-translate-y-0.5"
+                    disabled={submitting}
+                    className="group relative px-12 py-4 text-sm tracking-widest uppercase font-medium border transition-all duration-300 overflow-hidden hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                     style={{ borderColor: "hsl(0 0% 20%)", color: "hsl(0 0% 8%)" }}
                     onMouseEnter={e => {
+                      if (submitting) return;
                       (e.currentTarget as HTMLElement).style.background = "hsl(0 0% 8%)";
                       (e.currentTarget as HTMLElement).style.color = "hsl(0 0% 98%)";
                     }}
@@ -238,7 +272,7 @@ const Contact = () => {
                       (e.currentTarget as HTMLElement).style.color = "hsl(0 0% 8%)";
                     }}
                   >
-                    Send Message
+                    {submitting ? "Sending…" : "Send Message"}
                   </button>
                 </div>
               </form>
