@@ -98,12 +98,6 @@ const teamMembers = [
     bio: "",
   },
   {
-    name: "Erin Mccormick",
-    title: "Sr Account Manager",
-    image: erinImg,
-    bio: "",
-  },
-  {
     name: "Jess Irish Domingo",
     title: "Executive Assistant To CEO",
     image: jessImg,
