@@ -12,7 +12,7 @@ import archieImg from "@/assets/team-8-archie.png";
 import michelleImg from "@/assets/team-9-michelle.png";
 import rogerickImg from "@/assets/team-10-rogerick.png";
 import sharmaineImg from "@/assets/team-11-sharmaine.png";
-import tylerImg from "@/assets/team-12-tyler.png";
+
 import cristineImg from "@/assets/team-13-cristine.png";
 
 import jessImg from "@/assets/team-15-jess.png";
@@ -83,12 +83,6 @@ const teamMembers = [
     name: "Sharmaine Gayanes",
     title: "Accounting Manager",
     image: sharmaineImg,
-    bio: "",
-  },
-  {
-    name: "Tyeler Hess",
-    title: "Sr Account Manager",
-    image: tylerImg,
     bio: "",
   },
   {
