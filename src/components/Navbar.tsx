@@ -25,6 +25,7 @@ const Navbar = () => {
     { label: "Brands", path: "/brands" },
     { label: "Services", path: "/services" },
     { label: "Contact", path: "/contact" },
+    { label: "Shop", path: "https://shop.dovetailstrategic.com/", external: true },
   ];
 
   return (
