@@ -106,17 +106,31 @@ const Navbar = () => {
       {mobileOpen && (
         <div className="md:hidden border-t bg-background/95 backdrop-blur-md" style={{ borderColor: "hsl(0 0% 78%)" }}>
           <div className="flex flex-col px-6 py-6 gap-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`text-sm tracking-widest uppercase font-medium py-2 ${
-                  location.pathname === link.path ? "text-foreground" : "text-muted-foreground"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.external ? (
+                <a
+                  key={link.path}
+                  href={link.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`text-sm tracking-widest uppercase font-medium py-2 ${
+                    location.pathname === link.path ? "text-foreground" : "text-muted-foreground"
+                  }`}
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`text-sm tracking-widest uppercase font-medium py-2 ${
+                    location.pathname === link.path ? "text-foreground" : "text-muted-foreground"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
             <Link
               to="/contact"
               className="mt-2 px-6 py-2.5 text-sm tracking-widest uppercase font-medium border text-foreground text-center"
