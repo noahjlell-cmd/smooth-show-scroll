@@ -48,23 +48,37 @@ const Navbar = () => {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-10">
-          {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              className={`relative text-sm tracking-widest uppercase font-medium transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-px after:transition-all after:duration-300 ${
-                hasDarkHero && !scrolled
-                  ? location.pathname === link.path
-                    ? "text-white after:w-full after:bg-white"
-                    : "text-white/60 hover:text-white after:w-0 hover:after:w-full after:bg-white"
-                  : location.pathname === link.path
-                    ? "text-foreground after:w-full after:bg-foreground"
-                    : "text-muted-foreground hover:text-foreground after:w-0 hover:after:w-full after:bg-foreground"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const linkClass = `relative text-sm tracking-widest uppercase font-medium transition-colors duration-200 after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-px after:transition-all after:duration-300 ${
+              hasDarkHero && !scrolled
+                ? location.pathname === link.path
+                  ? "text-white after:w-full after:bg-white"
+                  : "text-white/60 hover:text-white after:w-0 hover:after:w-full after:bg-white"
+                : location.pathname === link.path
+                  ? "text-foreground after:w-full after:bg-foreground"
+                  : "text-muted-foreground hover:text-foreground after:w-0 hover:after:w-full after:bg-foreground"
+            }`;
+
+            return link.external ? (
+              <a
+                key={link.path}
+                href={link.path}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={linkClass}
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={linkClass}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
           <Link
             to="/contact"
             className={`px-6 py-2.5 text-sm tracking-widest uppercase font-medium transition-all duration-300 border hover:-translate-y-0.5 ${
